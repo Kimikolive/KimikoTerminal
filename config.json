@@ -1,0 +1,6 @@
+{
+    "model": "kawaii-v1",
+    "voice": "en-US-1",
+    "stream_key": "your_pump_stream_key",
+    "solana_network": "mainnet-beta"
+} 

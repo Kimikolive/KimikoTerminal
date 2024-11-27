@@ -1,0 +1,145 @@
+:root {
+    --primary-pink: #FF69B4;
+    --light-pink: #FFB6C1;
+    --white: #FFFFFF;
+    --pastel-pink: #FFE4E1;
+    --deep-pink: #FF1493;
+    --soft-purple: #E6E6FA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, var(--pastel-pink), var(--soft-purple));
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.floating-elements {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-heart {
+    position: absolute;
+    animation: float 10s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.title {
+    font-size: 4rem;
+    color: var(--deep-pink);
+    text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.5);
+    margin-bottom: 1rem;
+    animation: bounce 2s ease infinite;
+}
+
+.mascot {
+    width: 200px;
+    height: 200px;
+    background: url('https://placekitten.com/200/200') center/cover;
+    border-radius: 50%;
+    margin: 2rem auto;
+    border: 5px solid var(--white);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+    width: 100%;
+    max-width: 500px;
+    backdrop-filter: blur(5px);
+}
+
+.subtitle {
+    color: var(--deep-pink);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.cute-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cute-input {
+    width: 100%;
+    padding: 1rem;
+    border: 3px solid var(--light-pink);
+    border-radius: 50px;
+    font-size: 1rem;
+    font-family: 'Quicksand', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.cute-input:focus {
+    outline: none;
+    border-color: var(--primary-pink);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+}
+
+.error-message {
+    color: var(--deep-pink);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.submit-btn {
+    background: var(--primary-pink);
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px var(--primary-pink);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+} 
