@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="makimo1.png" alt="Makimo.Live" width="200"/>
+  <img src="kimiko1.png" alt="Kimiko.Live" width="200"/>
   <h1>KIMIKO.LIVE</h1>
   <p>Create Your Own AI VTuber Agent</p>
 </div>
