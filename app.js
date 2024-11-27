@@ -63,7 +63,7 @@ function App() {
                         />
                         {!isValid && (
                             <p className="error-message">
-                                Please enter a valid Solana address
+                                Please enter a valid Solana address Base 58 keypair
                             </p>
                         )}
                     </div>
